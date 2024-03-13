@@ -1,22 +1,22 @@
-import {NavigationContainer} from "@react-navigation/native";
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import { View,Text,StyleSheet } from "react-native";
+import User from "./User";
+import UserList from "./UserList";
 
 export default function App() {
   return (
-    
-    <NavigationContainer>
-      <Text>deneme</Text>
-      <StatusBar style="auto" />
-    </NavigationContainer>
+    <View style={styles.container}>
+      <UserList/>
+    </View>
   );
 }
 
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  container:{
+    flex:1,
+    justifyContent:"center",
+    alignItems: "center", 
+    paddingTop: 38,
+  }
+})
