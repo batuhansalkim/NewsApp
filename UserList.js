@@ -13,7 +13,7 @@ export default function UserList() {
     }, []);
 
     return (
-        <View style={{ width: "90%" }}>
+        <View style={{ width: "90%",paddingTop:10 }}>
             {loading ? <ActivityIndicator size={"large"} color={"#0D66FF"} /> : (
                 <FlatList
                 showsVerticalScrollIndicator={false}

@@ -1,22 +1,17 @@
 
-import { View,Text,StyleSheet } from "react-native";
-import User from "./User";
-import UserList from "./UserList";
+import { NavigationContainer } from "@react-navigation/native";
+import Home from "./screens/Home";
+import Navigator from "./Navigator";
+import { View } from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <UserList/>
-    </View>
-  );
+    <NavigationContainer>
+      <View style={{ flex: 1 ,backgroundColor:"white"}}>
+        <Navigator />
+      </View>
+    </NavigationContainer>
+  )
 }
 
 
-const styles = StyleSheet.create({
-  container:{
-    flex:1,
-    justifyContent:"center",
-    alignItems: "center", 
-    paddingTop: 38,
-  }
-})
