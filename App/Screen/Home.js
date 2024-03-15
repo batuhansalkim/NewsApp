@@ -3,6 +3,7 @@ import React from 'react'
 import CategoryTextSlider from '../Components/Home/CategoryTextSlider';
 import Color from '../Shared/Color';
 import {Ionicons} from "@expo/vector-icons";
+import TopHeadlineSlider from '../Components/Home/TopHeadlineSlider';
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
         <Ionicons name="notifications-outline" size={24} color="black" />
       </View>
       <CategoryTextSlider/>
-      
+      <TopHeadlineSlider/>
     </View>
   )
 }
