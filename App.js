@@ -1,17 +1,11 @@
 
-import { NavigationContainer } from "@react-navigation/native";
-import Home from "./screens/Home";
-import Navigator from "./Navigator";
-import { View } from "react-native";
+import { View, Text } from "react-native";
+import Login from "./App/Screens/LoginScreen/Login";
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <View style={{ flex: 1 ,backgroundColor:"white"}}>
-        <Navigator />
-      </View>
-    </NavigationContainer>
+    <View style={{ flex: 1,paddingTop:35}}>
+      <Login />
+    </View>
   )
 }
-
-
