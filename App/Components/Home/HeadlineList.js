@@ -1,10 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, Image, TouchableOpacity, View } from 'react-native'
 import React from 'react'
+import { FlatList } from 'react-native-gesture-handler'
 
-const HeadlineList = () => {
+const HeadlineList = ({ newList }) => {
+
   return (
     <View>
-      <Text>HeadlineList</Text>
+      <FlatList
+        data={newList}
+        renderItem={({ item }) => (
+          <TouchableOpacity>
+            <Image source={{uri:item.urlToImage}} style={{ width: 100, height: 100 }} />
+          </TouchableOpacity>
+        )}
+      />
     </View>
   )
 }

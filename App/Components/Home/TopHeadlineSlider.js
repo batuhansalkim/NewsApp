@@ -1,21 +1,9 @@
 import { FlatList, Text, StyleSheet, Image, TouchableOpacity, View, Dimensions } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import GlobalApi from "../../Services/GlobalApi";
 import Color from '../../Shared/Color';
 
-const TopHeadlineSlider = () => {
-
-  const [newList, setNewList] = useState([]);
-
-  useEffect(() => {
-    getTopHeadline();
-  }, []);
-
-  const getTopHeadline = async () => {
-    const result = (await GlobalApi.getTopHeadline).data;
-
-    setNewList(result.articles);
-  }
+const TopHeadlineSlider = ({ newList }) => {
 
   return (
     <View style={{ marginTop: 15 }}>
