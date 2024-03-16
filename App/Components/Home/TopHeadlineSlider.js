@@ -1,9 +1,8 @@
 import { FlatList, Text, StyleSheet, Image, TouchableOpacity, View, Dimensions } from 'react-native'
-import React, { useEffect } from 'react'
-import GlobalApi from "../../Services/GlobalApi";
+
 import Color from '../../Shared/Color';
 
-const TopHeadlineSlider = ({ newList }) => {
+const TopHeadlineSlider = ({newList}) => {
 
   return (
     <View style={{ marginTop: 15 }}>
