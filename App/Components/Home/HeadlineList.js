@@ -8,8 +8,11 @@ export default function HeadlineList({ newList }) {
       <FlatList
         data={newList}
         renderItem={({ item }) => (
-
+          
           <View >
+            <View style={{ height: 1, backgroundColor: Color.lightGray, marginTop: 10, marginLeft: -20 }}>
+
+            </View>
             <TouchableOpacity style={{ marginTop: 15, display: "flex", flexDirection: "row" }}>
               <Image source={{ uri: item.urlToImage }} style={{ width: 130, height: 130, borderRadius: 10 }}
               />

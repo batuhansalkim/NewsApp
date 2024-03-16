@@ -4,7 +4,7 @@ import GlobalApi from "../Services/GlobalApi";
 
 import CategoryTextSlider from '../Components/Home/CategoryTextSlider';
 import Color from '../Shared/Color';
-import {Ionicons} from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import TopHeadlineSlider from '../Components/Home/TopHeadlineSlider';
 import HeadlineList from '../Components/Home/HeadlineList';
 
@@ -21,15 +21,15 @@ const Home = () => {
     setNewList(result.articles);
   }
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
-      <View style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center"}}>
+    <ScrollView style={{ backgroundColor: "#fff" }} showsVerticalScrollIndicator={false}>
+      <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", }}>
         <Text style={styles.title}>BS News</Text>
         <Ionicons name="notifications-outline" size={24} color="black" />
       </View>
-      <CategoryTextSlider/>
-      <TopHeadlineSlider newList={newList}/>
+      <CategoryTextSlider />
+      <TopHeadlineSlider newList={newList} />
 
-      <HeadlineList newList={newList}/> 
+      <HeadlineList newList={newList} />
     </ScrollView>
   )
 }
@@ -37,9 +37,9 @@ const Home = () => {
 export default Home
 
 const styles = StyleSheet.create({
-  title:{
-    fontSize:24,
-    fontWeight:"bold",
-    color:Color.primary,
+  title: {
+    fontSize: 24,
+    fontWeight: "bold",
+    color: Color.primary,
   }
 })
