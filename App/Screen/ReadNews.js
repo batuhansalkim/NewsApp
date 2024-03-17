@@ -1,5 +1,5 @@
 import { useRoute } from "@react-navigation/native";
-import { StyleSheet, Text, View, Image, TouchableOpacity, Share, Button } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity, Share, Button, ScrollView } from 'react-native'
 import { useNavigation } from "@react-navigation/native";
 
 import React, { useEffect } from 'react'
@@ -20,7 +20,7 @@ export default function ReadNews() {
     })
   }
   return (
-    <View style={{ backgroundColor: "white", flex: 1, }}>
+    <ScrollView style={{ backgroundColor: "white", flex: 1, }}>
       <View style={{ marginTop: 10, marginBottom: 10, display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Ionicons name="arrow-back" size={28} color="black" />
@@ -36,11 +36,11 @@ export default function ReadNews() {
       <Text style={{ marginTop: 10, fontSize: 22, fontWeight: "bold" }}>{news.title}</Text>
       <Text style={{ marginTop: 10, fontSize: 16, color: Color.gray, lineHeight: 30 }}>{news.description}</Text>
 
-      <TouchableOpacity onPress={()=>WebBrowser.openBrowserAsync(news.url)}>
-        <Text  style={{ marginTop: 10, color: Color.primary, fontSize: 16, fontWeight: "bold" }}>Read More</Text>
+      <TouchableOpacity onPress={() => WebBrowser.openBrowserAsync(news.url)}>
+        <Text style={{ marginTop: 10, color: Color.primary, fontSize: 16, fontWeight: "bold" }}>Read More</Text>
       </TouchableOpacity>
-      
-    </View>
+
+    </ScrollView>
   )
 }
 
