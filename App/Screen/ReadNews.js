@@ -5,6 +5,8 @@ import { useNavigation } from "@react-navigation/native";
 import React, { useEffect } from 'react'
 import Color from "../Shared/Color";
 import { Ionicons } from "@expo/vector-icons";
+import * as WebBrowser from "expo-web-browser";
+
 export default function ReadNews() {
   const news = useRoute().params.news;
   const navigation = useNavigation();
@@ -14,7 +16,7 @@ export default function ReadNews() {
 
   const shareNews = () => {
     Share.share({
-      message:news.title+"\nRead More"+news.description
+      message: news.title + "\nRead Morebatuhanslkm" + news.description
     })
   }
   return (
@@ -33,7 +35,11 @@ export default function ReadNews() {
 
       <Text style={{ marginTop: 10, fontSize: 22, fontWeight: "bold" }}>{news.title}</Text>
       <Text style={{ marginTop: 10, fontSize: 16, color: Color.gray, lineHeight: 30 }}>{news.description}</Text>
-      <Button title="Read More" style={{ marginTop: 10, color: Color.primary, fontSize: 16, fontWeight: "bold" }}></Button>
+
+      <TouchableOpacity onPress={()=>WebBrowser.openBrowserAsync(news.url)}>
+        <Text  style={{ marginTop: 10, color: Color.primary, fontSize: 16, fontWeight: "bold" }}>Read More</Text>
+      </TouchableOpacity>
+      
     </View>
   )
 }
